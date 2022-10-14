@@ -4,7 +4,7 @@
 		<menuitem id="estate_first_level_menu_advertisements" name="Advertisements">
 			<menuitem id="estate_menu_advertisement_action" action="estate_property_action"/>
 		</menuitem>
-		<menuitem id="estate_flm_settings" name="Settings">
+		<menuitem id="estate_first_level_menu_settings" name="Settings">
 			<menuitem id="estate_menu_settings_type_action" action="estate_property_type_action"/>
 			<menuitem id="estate_menu_settings_tags_action" action="estate_property_tags_action"/>
 		</menuitem>
