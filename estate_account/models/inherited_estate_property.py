@@ -9,12 +9,18 @@ class Property(models.Model):
         self.ensure_one()
         journal = self.env['account.move'].with_context(default_move_type='out_invoice')._get_default_journal()
 
-        # TODO add actual property price to line_ids?
+        # DONE add actual property price to line_ids?
         invoice_vals = {
             'move_type': 'out_invoice',
             'partner_id': self.buyer_id.id,
             'journal_id': journal.id,
             'line_ids': [
+                Command.create({
+                    "name": self.name,
+                    "quantity": 1,
+                    "price_unit": self.selling_price,
+                    "account_id": 1,  # TODO find out why this needs to be here
+                }),
                 Command.create({
                     "name": "Provision",
                     "quantity": 1,
