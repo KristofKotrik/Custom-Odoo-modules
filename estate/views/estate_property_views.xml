@@ -63,7 +63,12 @@
         <field name="arch" type="xml">
             <form string="Find me!">
                 <header>
-                    <button name="action_state_sold" type="object" string="Sold" states="new,received,accepted"/>
+                    <button
+                        name="action_state_sold"
+                        type="object" string="Sold"
+                        states="new,received,accepted"
+                        class="oe_highlight"
+                    />
                     <button name="action_state_canceled" type="object" string="Cancel" states="new,received,accepted"/>
                     <field name="state" widget="statusbar" statusbar_visible="new,received,accepted,sold"/>
                 </header>
